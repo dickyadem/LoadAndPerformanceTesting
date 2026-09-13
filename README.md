@@ -1,5 +1,7 @@
 # API Performance & Load Testing Report
 
+**Live Dashboard:** [https://dickyadem.github.io/LoadAndPerformanceTesting/](https://dickyadem.github.io/LoadAndPerformanceTesting/)
+
 Dokumen ini merupakan gabungan dari laporan hasil pengujian beban dan penjelasan struktur test plan JMeter untuk project API Authentication & User Management. README ini berfungsi sebagai ringkasan portofolio yang mudah dibaca, sedangkan file laporan detail tetap tersedia untuk referensi teknis.
 
 ## 1. Project Overview
@@ -69,7 +71,23 @@ Hasil ini menunjukkan bahwa sistem belum sepenuhnya siap untuk trafik burst ting
 
 ---
 
-## 5. Technical Recommendations
+## 5. Dokumentasi Hasil Load Testing
+
+### Ringkasan Performa
+
+Gambar berikut menunjukkan ringkasan hasil pengujian JMeter, termasuk APDEX, jumlah request, persentase request gagal, waktu respons, throughput, dan status pengujian.
+
+![Ringkasan hasil load testing JMeter](assets/ReportLoad.png)
+
+### Detail Error
+
+Pada detail error, beberapa respons yang perlu diperhatikan adalah `403 Forbidden`, koneksi terputus, `401 Unauthorized`, dan `502 Bad Gateway`. Informasi ini dapat digunakan untuk memeriksa konfigurasi autentikasi, akses endpoint, koneksi jaringan, dan kapasitas server.
+
+![Detail error hasil load testing JMeter](assets/ReportLoad2.png)
+
+---
+
+## 6. Technical Recommendations
 
 Beberapa langkah yang disarankan untuk tim pengembangan adalah:
 
@@ -80,7 +98,7 @@ Beberapa langkah yang disarankan untuk tim pengembangan adalah:
 
 ---
 
-## 6. CLI Execution Log
+## 7. CLI Execution Log
 
 ### Execute JMeter Test in Non-GUI Mode
 
@@ -97,7 +115,7 @@ jmeter -g "C:\Users\ASUS\results.jtl" -o "C:\Users\ASUS\Documents\apache-jmeter-
 
 ---
 
-## 7. Struktur Test Plan JMeter
+## 8. Struktur Test Plan JMeter
 
 Dokumen ini juga mencakup struktur ideal dari test plan JMeter agar pengujian lebih terorganisir dan mudah dianalisis.
 
@@ -183,7 +201,7 @@ Menampilkan ringkasan metrik seperti:
  
  
 
-## 8. Repository Notes
+## 9. Repository Notes
 
 Project ini mencakup:
 
